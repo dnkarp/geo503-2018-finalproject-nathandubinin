@@ -1,22 +1,21 @@
 ---
-title: "I have the best titles"
-author: Your name here
-subtitle: Subtitle here if desired
+title: "The Story Pollen Tells Us"
+author: Nathan Dubinin
+subtitle: A Brief Examination of southern Swedish Palynological Data
 --- 
 
 # Introduction
 
-#[<i class="fa fa-file-code-o fa-1x" aria-hidden="true"></i> Download this file as a template ](`r knitr::current_input()`).
 
 # Introduction to problem/question
-Proxy data has been used in the creation of paleoclimate models.  These include, but are not limited to dendrochronological studies and palynological studies.  In the past decade, R has become a powerful tool with  statistical analyses, and data visualization to name just a couple ways R has been used.  Many different types of research uses R for at least some aspect of research, if it is to plot data simply using ggplot, or to create an online website using markdown or leaflet.  It has become the norm within scientiic research transcending disciplines.  This is partly because one, it is tremendously powerful as a visualization tool, and two, allows for reproducible results. Reproducibility is arguably one of the most critical aspects in scientific research.      
+Pollen diagrams offer a visualiztion of past landscapes.  They can tell a story about the past which may entail human activity or climatic events.  In the past decade, R has become a powerful tool with  statistical analyses, and data visualization in scientific research.  Due to its prevalence, R has become the norm within scientiic research transcending disciplines.  This is partly because one, it is tremendously powerful as a visualization tool, and two, allows for reproducible results.       
   
 # Problem / Question
-The purpose of this project is to utilize R to viusalize  ancient pollen data in southern Sweden.  It will be the groundwork for devloping a climate model specific to the Bohuslän province of Sweden.    
+The purpose of this project is to utilize R to viusalize  ancient pollen data in southern Sweden.  By visualizing pollen data, we can start to ask questions.  Two questions will be asked for this project. What narratives can be told examining pollen diagrams?  Does the story glean any information pertaining to climatic events or cultural transformation of landscape?   
 
 # Inspiring Examples
 
-# Include links and screenshots (or embedded images) of a few (~3-5) example graphics found on the internet that convey what you want to do.  Include a few sentences about why you selected each link.
+
 
 ## Example 1
 ![](http://www.museum.state.il.us/muslink/forest/images/Nelson.gif)  
@@ -35,11 +34,21 @@ This is another example of a pollen diagram representing a 4,000 year profile of
 
 This graphic was used using ggplot2, If you would like, you could display the data as a different shape or use different colors to reprsent your graph.  Simmilar to the first graphic, the y-axis represents years BP instead of sediment depth.  
 
-# Proposed data sources
+# Data sources
 
-Data will be acquired through two websites: https://www.pangaea.de/ and http://www.europeanpollendatabase.net/fpd-epd/bibli.do.  Both sites offer a plethora of pollen data, but the main focus will be identifying sites within southern Sweden.    
+Data accessed from the European Pollen Database (EPD) via the Neotoma Paleoecology Database Explorer.
 
-# Proposed methods
+DISCLAIMER: It should be noted that according to the EPD, Neotoma is not completely up to date. 
+
+Websites:
+
+http://www.europeanpollendatabase.net/fpd-epd/bibli.do
+
+http://apps.neotomadb.org/explorer/
+
+
+
+# Proposed Methods
 
 A couple of packages may be employed to make pollen diagrams.  The 'rioja' package allows for a simplified version of creating different types of pollen diagrams, as opposed to the use of ggplot2.  You can use ggplot2 to create pollen diagrams, as is illustrated in the "Example 3" graphic.  The 'rioja' package however makes it easier.  A series of arguements are used, with vectors representing the y and x axis, where the y-axis will represent time or sediment depth (depnding on specific data) and the x-axis representing the percentage of a given species.  There are several plot types that are built into 'rioja' so, ggplot can still be used, but is not necessry.  I will be able to download the pollen data directly from the websites mentioned in the "Proposed data sources" using the 'rioja' package.       
 
