@@ -48,7 +48,7 @@ http://apps.neotomadb.org/explorer/
 
 # Proposed Methods
 
-A couple of packages may be employed to make pollen diagrams.  The 'rioja' package allows for a simplified version of creating different types of pollen diagrams, as opposed to the use of ggplot2.  You can use ggplot2 to create pollen diagrams, as is illustrated in the "Example 3" graphic.  The 'rioja' package however makes it easier.  A series of arguements are used, with vectors representing the y and x axis, where the y-axis will represent time or sediment depth (depnding on specific data) and the x-axis representing the percentage of a given species.  There are several plot types that are built into 'rioja' so, ggplot can still be used, but is not necessry.  I will be able to download the pollen data directly from the websites mentioned in the "Proposed data sources" using the 'rioja' package.       
+A series of packages are employed to make pollen diagrams.  These consist of the 'rioja'  and 'analogue' packages allowing for a simplified version of creating of a pollen diagrams, as opposed to the use of ggplot2.  You can use ggplot2 to create pollen diagrams, as is illustrated in the "Example 3" graphic.  The 'rioja' package however makes it easier.  A series of arguements are used, with vectors representing the y and x axis, where the y-axis will represent time or sediment depth (depnding on specific data) and the x-axis representing the percentage of a given species.  There are several plot types that are built into 'rioja' so, ggplot can still be used, but is not necessry.  I will be able to download the pollen data directly from the websites mentioned in the "Proposed data sources" using the 'rioja' package.       
 
 # Expected results
 
