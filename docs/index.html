@@ -312,97 +312,107 @@ div.tocify {
 
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Pollen diagrams offer a visualiztion of past landscapes. They can tell a story about the past which may entail human activity or climatic events. In the past decade, R has become a powerful tool with statistical analyses, and data visualization in scientific research. Due to its prevalence, R has become the norm within scientiic research transcending disciplines. This is partly because one, it is tremendously powerful as a visualization tool, and two, allows for reproducible results.</p>
+<p>Pollen diagrams offer a visualization of past landscapes. They can tell a story about the past which entails human activity and climatic events. In the past decade, R has become a powerful tool with statistical analyses, and data visualization in scientific research. Due to its prevalence, R has become the norm within scientiic research transcending disciplines. This is partly because it is tremendously powerful as a visualization tool and allows for reproducible results.</p>
+<p>The purpose of this project is to create a series of pollen diagrams which will visualize ancient pollen data in southern Sweden. While examining the pollen data, we can start to ask questions. Two questions will be asked for this project. What narratives can be told examining pollen diagrams? Does the story glean any information pertaining to climatic events or cultural transformation of landscape?</p>
 </div>
-<div id="problem-question" class="section level1">
-<h1>Problem / Question</h1>
-<p>The purpose of this project is to utilize R to viusalize ancient pollen data in southern Sweden. By visualizing pollen data, we can start to ask questions. Two questions will be asked for this project. What narratives can be told examining pollen diagrams? Does the story glean any information pertaining to climatic events or cultural transformation of landscape?</p>
-</div>
-<div id="inspiring-examples" class="section level1">
-<h1>Inspiring Examples</h1>
-<div id="example-1" class="section level2">
-<h2>Example 1</h2>
-<div class="figure">
-<img src="http://www.museum.state.il.us/muslink/forest/images/Nelson.gif" />
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<p>A series of packages are employed to make pollen diagrams. These consist of the ‘analogue’ and ‘neotoma’ packages. They allow for the simple creation of diagrams or profiles to view. You can use ‘ggplot2’ to create pollen diagrams, but is beyond the scope of this project. It is however useful to know that there are many options in creating pollen diagrams.</p>
+<p>A series of arguements are used, with vectors representing the y and x axis, where the y-axis will represent time or sediment depth (depnding on specific data) and the x-axis representing the relative abundance as a percentage of a given species. ‘There are several plot types that are built into ’analogue,’ so ggplot can still be used, but is not necessry. Pollen data may be directly downloaded from online. The Neotoma databases’s API and package ‘Neotoma’ allows for easy access to pollen data originally hosted by the European Pollen Database. The database explorer also allows for advanced searches that can narrow down pollen data within time and space. This particular feature makes it easy to find datasets associated with a particular country.</p>
+<p>Below are the packages that need to be installed:</p>
+<pre class="r"><code># packages:
 
-</div>
-<p>This is an example of a pollen diagram of Nelson Lake, Kane County, Illinois. The y-axis represents time, encompassing 17,000 years BP (before present) and the x-axis represents the proportioin of a given species. The graphic does not illustrate the depth of sediment, which may also be displayed on the y-axis, as will be illustrated in the following graphic.</p>
-</div>
-<div id="example-2" class="section level2">
-<h2>Example 2</h2>
-<div class="figure">
-<img src="http://www.jefpat.org/archeobotany/Images/PollenDiagram/Image1.jpg" />
-
-</div>
-<p>This is another example of a pollen diagram representing a 4,000 year profile of the Magothy River located in Maryland. Along the y-axis, sediment depth is represented, and it also has added radiocarbon sample dates, which are useful when looking at the overall profile to discuss when particular events happened, such as burning events.</p>
-</div>
-<div id="example-3" class="section level2">
-<h2>Example 3</h2>
-<div class="figure">
-<img src="http://blarquez.com/wp-content/uploads/2017/05/unnamed-chunk-6-1-1024x731.png" />
-
-</div>
-<p>This graphic was used using ggplot2, If you would like, you could display the data as a different shape or use different colors to reprsent your graph. Simmilar to the first graphic, the y-axis represents years BP instead of sediment depth.</p>
-</div>
-</div>
-<div id="data-sources" class="section level1">
-<h1>Data sources</h1>
-<p>Data accessed from the European Pollen Database (EPD) via the Neotoma Paleoecology Database Explorer.</p>
-<p>DISCLAIMER: It should be noted that according to the EPD, Neotoma is not completely up to date.</p>
-<p>Websites:</p>
-<p><a href="http://www.europeanpollendatabase.net/fpd-epd/bibli.do" class="uri">http://www.europeanpollendatabase.net/fpd-epd/bibli.do</a></p>
-<p><a href="http://apps.neotomadb.org/explorer/" class="uri">http://apps.neotomadb.org/explorer/</a></p>
-</div>
-<div id="proposed-methods" class="section level1">
-<h1>Proposed Methods</h1>
-<p>A couple of packages may be employed to make pollen diagrams. The ‘rioja’ package allows for a simplified version of creating different types of pollen diagrams, as opposed to the use of ggplot2. You can use ggplot2 to create pollen diagrams, as is illustrated in the “Example 3” graphic. The ‘rioja’ package however makes it easier. A series of arguements are used, with vectors representing the y and x axis, where the y-axis will represent time or sediment depth (depnding on specific data) and the x-axis representing the percentage of a given species. There are several plot types that are built into ‘rioja’ so, ggplot can still be used, but is not necessry. I will be able to download the pollen data directly from the websites mentioned in the “Proposed data sources” using the ‘rioja’ package.</p>
-</div>
-<div id="expected-results" class="section level1">
-<h1>Expected results</h1>
-<p>I would like to produce a series of pollen diagrams that represent a series of sites within southern Sweden, with particular attention to the province of Bohuslän. The diagrams will be useful in discussing possible climactic trends through time given different species of vegetation.</p>
-<p>My really awesome and complete introduction will go here.</p>
-<blockquote>
-<p>I know words. I have the best words. ~ Donald Trump</p>
-</blockquote>
-</div>
-<div id="materials-and-methods" class="section level1">
-<h1>Materials and methods</h1>
-<p>Narrative and most code will go here. Describe what you are doing and show how to do it (with code).</p>
-<p>You can do bullets like this:</p>
-<ul>
-<li>The first most important thing</li>
-<li>The second most important thing</li>
-<li>The third most important thing</li>
-</ul>
-<p>You can do numbers like this:</p>
-<ol style="list-style-type: decimal">
-<li>The first most important thing</li>
-<li>The second most important thing</li>
-<li>The third most important thing</li>
-</ol>
-<p>See <a href="http://rmarkdown.rstudio.com/" class="uri">http://rmarkdown.rstudio.com/</a> for all the amazing things you can do.</p>
-<p>Here’s my first code chunk.</p>
-<pre class="r"><code>1+2</code></pre>
-<pre><code>## [1] 3</code></pre>
-<p>Load any required packages in a code chunk (you may need to install some packages):</p>
-<pre class="r"><code>library(dplyr)
-library(ggplot2)
-library(maps)
-library(spocc)
-knitr::opts_chunk$set(cache=TRUE)  # cache the results for quick compiling</code></pre>
-<p>We are going to use the <code>occ()</code> function to download <em>occurrence</em> records for the American robin (<em>Turdus migratorius</em>) from the <a href="gbif.org">Global Biodiversity Information Facility</a>.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Turdus-migratorius-002.jpg" alt="alt text" width="200"> <small><small><small>Licensed under CC BY-SA 3.0 via <a href="https://commons.wikimedia.org/wiki/File:Turdus-migratorius-002.jpg#/media/File:Turdus-migratorius-002.jpg">Wikimedia Commons</a></small></small></small></p>
+library(permute)
+library(lattice)
+library(vegan)</code></pre>
+<pre><code>## This is vegan 2.5-3</code></pre>
+<pre class="r"><code>library(neotoma)
+library(analogue)</code></pre>
+<pre><code>## analogue version 0.17-1</code></pre>
+<p>Five sites have been chosen in southern Sweden: Lake Sambösjön, Lake Flarken, Dags Mosse, Mabo Moss, Kansjon</p>
+<p>The following code illustrates how you can get pollen data using the API of the Neotoma Paleoecology Database. Lake Sambösjön will be used and can be a template to replicate other diagrams with other pollen data.</p>
+<p>The lines of code below represent data being fetched from the Neotoma API.<br />
+<em>The “get_site” returns information from the Neotoma Database.<br />
+</em>The “get_dataset” function allows for acsess to the API and to return datasets associated with a particular site. *The “get_download” allows for the return of the download which is associated either with a dataset ID, site object or dataset object.</p>
+<pre class="r"><code>sam &lt;- get_site(sitename = &#39;Lake Sambösjön&#39;)</code></pre>
+<pre><code>## The API call was successful, you have returned  1 records.</code></pre>
+<pre class="r"><code>sam_pollen=get_dataset(sam)
+sam_data=get_download(sam_pollen)</code></pre>
+<pre><code>## API call was successful. Returned record for Lake Sambösjön
+## API call was successful. Returned record for Lake Sambösjön</code></pre>
+<pre><code>## The dataset ID 9172 is associated with a geochronology object, not count data.</code></pre>
+<pre><code>## Warning in get_download.default(datasetid, verbose = verbose): Some datasetids returned empty downloads, be aware that length(datasetid) is longer than the download_list.</code></pre>
+<p>After the data has been downloaded through the API relative percentages can be calculated. This is because most pollen data does not have percentages of pollen, rather counts. The EPD’s data policy requires that their data have pollen counts and exclude any percentages.</p>
+<p>Pollen diagrams show relative abundance as a percent along the x-axis of the diagram. The next few lines of code illusrate how percentages are calculated from the pollen data.</p>
+<p><em>The “tran” function in ‘analogue’ has many options to transform or standardize data. In the following case, “tran” will be used to convert the counts of every taxa or group of vegetation using the “method = ‘percent’” argument. </em>The second line of code is assigning the calibrated radiocarbon age from the pollen data. *The final line in this code chunk is using the “chooseTaxa” function with two arguments: 1. Using the sam.core.pct as the object. 2. Using “max.abun” to set the lower limit of percentages. In this case anything less than ten percent will be excluded.</p>
+<pre class="r"><code>sam.core.pct &lt;- data.frame(tran(sam_data[[1]]$counts, method = &#39;percent&#39;))
+sam.age &lt;- sam_data[[1]]$sample.meta$age
+sam.core.pct &lt;- chooseTaxa(sam.core.pct, max.abun = 10)</code></pre>
+<p>Now that the data for Lake Sambösjön has been adequately wrangled, the “Stratiplot” function can be used to create pollen diagrams. It is a simple function with a series of arguments: 1. object which is sam.core.pct data frame. 2. sort which deals with how variables on the x-axis are displayed, ‘wa’ represents weighted average. 3. type deals with what kind of shape or line does the diagram havee. For below, a vector was created with “poly”, representing a filled shape and “g” which represents a grid for reference.<br />
+4. ylab is the y-axis label 5. xlab is the x-axis label</p>
+<pre class="r"><code>Stratiplot(sam.age ~., sam.core.pct, sort = &#39;wa&#39;, type = c(&quot;poly&quot;, &quot;g&quot;), ylab = &#39;Years Before Present&#39;, xlab = &#39;Relative Abundance (%)&#39;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 <div id="results" class="section level1">
 <h1>Results</h1>
-<p>Show tables, plots, etc. and describe them.</p>
+<p>The following are a series of pollen profiles that represent five sites within southern Sweden. They consist of three lakes and two bogs. The diagrams will be useful in discussing possible cänlimactic trends through time given different species of vegetation.</p>
+<div id="lake-sambosjon" class="section level2">
+<h2>Lake Sambösjön</h2>
+<div id="lake.-physiography-lake.-surrounding-vegetation-10-15m-broad-and-continuous-alnus-belt.-neotoma" class="section level3">
+<h3>“Lake. Physiography: lake. Surrounding vegetation: 10-15m broad and continuous Alnus belt.” (Neotoma)</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+</div>
+<div id="lake-flarken" class="section level2">
+<h2>Lake Flarken</h2>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="dags-mosse" class="section level2">
+<h2>Dags Mosse</h2>
+<div id="raised-pinus-sedum-sphagnum-bog.-physiography-tills-and-glaciofluvial-depressions.-surrounding-vegetation-pinus-betula-picea-belt.-neotoma" class="section level3">
+<h3>“Raised Pinus-Sedum-Sphagnum bog. Physiography: tills and glaciofluvial depressions. Surrounding vegetation: Pinus-Betula (Picea) belt.” (Neotoma)</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+</div>
+<div id="mabo-moss" class="section level2">
+<h2>Mabo Moss</h2>
+<div id="slightly-raised-pinus-ledum-sphagnum-bog.-physiography-glaciofluvial-deposits-and-tills.-surrounding-vegetation-pinus-betula-picea-quercus.-neotoma" class="section level3">
+<h3>“Slightly raised Pinus-Ledum-Sphagnum bog. Physiography: Glaciofluvial deposits and tills. Surrounding vegetation: Pinus-Betula-Picea (Quercus).” (Neotoma)</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+</div>
+<div id="kansjon" class="section level2">
+<h2>Kansjon</h2>
+<div id="lake.-physiography-rolling-till-surface.-surrounding-vegetation-pinus-betula.-neotoma" class="section level3">
+<h3>“Lake. Physiography: Rolling till surface. Surrounding vegetation: Pinus, Betula.” (Neotoma)</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+</div>
 </div>
 <div id="conclusions" class="section level1">
 <h1>Conclusions</h1>
-<p>What have you learned? Are there any broader implications?</p>
+<p>Still working on the overall interpretation of the diagrams. However, pollen diagrams allow for a glimpse of how landscapes have changed through time. The R packagees used for this project illustrate the efficacy of creating simple and quick diagrams. There are however some limitations with the specific arguments. Furthermore, there are alos issues concerning pollen data that need to be adressed. The relative abundance is calculating the percentage of the pollen counts for each taxa. Relative pollen percentages may not mean that there is more of one taxa versus another. Some plants give off more or less pollen when compared to one another. Another issue that is discussed in Walanus &amp; Nalepka (2013), is that a zero count does not necessarily mean that there was no pollen present for a specific taxa, rather it fell below a particular threshold when sampling at different levels of the core.</p>
 </div>
-<div id="references" class="section level1">
-<h1>References</h1>
+<div id="references-and-data-sources" class="section level1">
+<h1>References and Data Sources</h1>
+<p>Data accessed from the European Pollen Database (EPD) via the Neotoma Paleoecology Database Explorer’s API.</p>
+<p>Websites:</p>
+<p><a href="http://www.europeanpollendatabase.net/fpd-epd/bibli.do" class="uri">http://www.europeanpollendatabase.net/fpd-epd/bibli.do</a></p>
+<p><a href="http://apps.neotomadb.org/explorer/" class="uri">http://apps.neotomadb.org/explorer/</a></p>
+<p><a href="https://CRAN.R-project.org/package=neotoma" class="uri">https://CRAN.R-project.org/package=neotoma</a></p>
+<p><a href="https://CRAN.R-project.org/package=vegan" class="uri">https://CRAN.R-project.org/package=vegan</a></p>
+<p><a href="https://CRAN.R-project.org/package=lattice" class="uri">https://CRAN.R-project.org/package=lattice</a></p>
+<p><a href="https://CRAN.R-project.org/package=permute" class="uri">https://CRAN.R-project.org/package=permute</a></p>
+<p><a href="https://CRAN.R-project.org/package=analogue" class="uri">https://CRAN.R-project.org/package=analogue</a></p>
+<p><a href="http://paleoecologie.umontreal.ca/" class="uri">http://paleoecologie.umontreal.ca/</a></p>
+<p><a href="https://www.fromthebottomoftheheap.net/2011/06/08/stratigraphic-diagrams-using-analogue/" class="uri">https://www.fromthebottomoftheheap.net/2011/06/08/stratigraphic-diagrams-using-analogue/</a></p>
+<p>Articles:</p>
+<p>Digerfeldt, G. 1982. The Holocene development of Lake Sambosjon. 1. The regional vegetation history. Lundqua Report, 23:1-24.</p>
+<p>Digerfeldt, G. 1977. The Flandrian development of Lake Flarken. Regional vegetation history and palaeolimnology. University of Lund Department of Quaternary Geology. Report 13:1-101.</p>
+<p>Göransson, H. 1991. Vegetation and man around Lake Bjärsjöholmssjön during prehistoric time. Lundqua Report 31. Data :</p>
+<p>Mitchell, F. J. (2005). How open were European primeval forests? Hypothesis testing using palaeoecological data. Journal of Ecology, 93(1), 168-177.</p>
+<p>Seppä, H., Hammarlund, D., Antonsson, K., Teknisk-naturvetenskapliga vetenskapsområdet, Uppsala universitet, Geovetenskapliga sektionen, &amp; Institutionen för geovetenskaper. (2005). Low-frequency and high-frequency changes in temperature and effective humidity during the holocene in south-central sweden: Implications for atmospheric and oceanic forcings of climate. Climate Dynamics, 25(2), 285-297. <a href="doi:10.1007/s00382-005-0024-5" class="uri">doi:10.1007/s00382-005-0024-5</a></p>
+<p>Walanus, A., &amp; Nalepka, D. (2013). Information content of zero pollen counts in holocene profiles. The Holocene, 23(5), 732-738. <a href="doi:10.1177/0959683612465444" class="uri">doi:10.1177/0959683612465444</a></p>
 </div>
 
 <!-- give the footer some space -->
